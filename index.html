@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f9363a78aa.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Vintage Revival</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="vintage-revival">Vintage Revival</h1>
+      <p id="cart-counter"></p>
+      <div><i class="fa-solid fa-cart-shopping"></i></div>
+    </header>
+    <main>
+      <div id="section-container">
+        <section>
+          <h2>Coffee and Cocktail Tables</h2>
+          <ul id="tables-container"></ul>
+        </section>
+        <section>
+          <h2>Accent and Lounge Chairs</h2>
+          <ul id="chairs-container"></ul>
+        </section>
+        <section>
+          <h2>Sofas and Sectionals</h2>
+          <ul id="sofas-container"></ul>
+        </section>
+        <section>
+          <h2>Dressers and Bedroom Sets</h2>
+          <ul id="bedroom-container"></ul>
+        </section>
+      </div>
+      <div id="current-cart" class="hidden">
+        <div><button id="cart-delete-button">X</button></div>
+        <div id="purchasing-cart"><ul id="item-container"></ul></div>
+        <div id="subtotal-tax-total-field" class="hidden">
+          <p class="subtotal"></p>
+          <p class="tax"></p>
+          <p class="total"></p>
+        </div>
+        <div id="button-container" class="hidden">
+          <p>How would you like to pay?</p>
+          <button id="cash-button">Cash</button>
+          <button id="credit-button">Credit</button>
+          <div id="cash-checkout" class="hidden">
+            <button id="cash-delete-button">X</button>
+            <form id="cash-checkout-form-container">
+              <p id="cash-container-total"></p>
+              <input
+                type="number"
+                id="cash-on-hand"
+                placeholder="Cash Tendered"
+              />
+              <button id="cash-submit">Submit</button>
+            </form>
+          </div>
+          <div id="credit-checkout" class="hidden">
+            <button id="credit-delete-button">X</button>
+            <form id="credit-card-form">
+              <section id="form-header">
+                <h3 id="card-details">Credit card details</h3>
+              </section>
+              <div id="form-body">
+                <input
+                  type="text"
+                  name="cardholder-name"
+                  id="cardholder-name"
+                  placeholder="Cardholder name"
+                />
+                <input
+                  type="text"
+                  name="card-number"
+                  id="card-number"
+                  placeholder="Card Number"
+                />
+                <div id="date-container">
+                  <div id="month-container">
+                    <select name="Month">
+                      <option value="january">January</option>
+                      <option value="february">February</option>
+                      <option value="march">March</option>
+                      <option value="april">April</option>
+                      <option value="may">May</option>
+                      <option value="june">June</option>
+                      <option value="july">July</option>
+                      <option value="august">August</option>
+                      <option value="september">September</option>
+                      <option value="october">October</option>
+                      <option value="november">November</option>
+                      <option value="december">December</option>
+                    </select>
+                  </div>
+                  <div id="year-container">
+                    <select name="Year">
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="card-verification">
+                  <div id="cvv-input">
+                    <input type="text" name="cvv" id="cvv" placeholder="CVV" />
+                  </div>
+                  <div id="cvv-digits">
+                    <p>3 or 4 digits</p>
+                  </div>
+                </div>
+                <button id="submit-button-credit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="receipt-container" class="hidden">
+          <h3 id="order-confirmation" class="hidden">
+            Thank you for shopping with us!
+          </h3>
+          <div id="receipt-list"><ul id="item-receipt-container"></ul></div>
+          <div id="item-receipt-total">
+            <p class="subtotal"></p>
+            <p class="tax"></p>
+            <p class="total"></p>
+          </div>
+          <p id="cash-checkout-change-total"></p>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
