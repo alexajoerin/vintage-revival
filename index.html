@@ -13,12 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
@@ -68,9 +62,13 @@
           <p class="total"></p>
         </div>
         <div id="button-container" class="hidden">
-          <p>How would you like to pay?</p>
-          <button id="cash-button">Cash</button>
-          <button id="credit-button">Credit</button>
+          <div class="payment-options-container">
+            <p id="payment-text">How would you like to pay?</p>
+            <div>
+              <button id="cash-button">Cash</button>
+              <button id="credit-button">Credit</button>
+            </div>
+          </div>
           <div id="cash-checkout" class="hidden">
             <button id="cash-delete-button">X</button>
             <form id="cash-checkout-form-container">
@@ -147,6 +145,7 @@
           </div>
         </div>
         <div id="receipt-container" class="hidden">
+          <button id="receipt-delete-button">X</button>
           <h3 id="order-confirmation" class="hidden">
             Thank you for shopping with us!
           </h3>

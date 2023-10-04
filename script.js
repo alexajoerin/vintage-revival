@@ -130,6 +130,7 @@ const creditCardForm = document.querySelector("#credit-card-form");
 const receiptHeader = document.querySelector("#receipt-header");
 const itemReceiptTotal = document.querySelector("#item-receipt-total");
 const orderConfirmation = document.querySelector("#order-confirmation");
+const receiptDeleteButton = document.querySelector("#receipt-delete-button");
 let total = null;
 let tax = null;
 let subtotal = null;
@@ -273,6 +274,10 @@ cashCheckoutFormContainer.addEventListener("submit", (event) => {
       totalContainer
     );
   });
+});
+receiptDeleteButton.addEventListener("click", () => {
+  // Redirect to the main page
+  window.location.href = "index.html";
 });
 creditCardForm.addEventListener("submit", (event) => {
   itemReceiptContainer.innerHTML = "";
