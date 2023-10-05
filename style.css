@@ -137,6 +137,7 @@ ul {
   padding: 15px;
   overflow: scroll;
   border-radius: 15px;
+  padding-right: 30px;
 }
 
 #current-cart img {
@@ -181,6 +182,8 @@ ul {
   font-size: 16px;
   transition: background-color 0.3s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  width: 100px; /* Set a fixed width for the buttons */
+  text-align: center; /* Center the button text */
 }
 
 #cash-button:hover,
@@ -204,8 +207,10 @@ ul {
   border: 1px solid black;
 }
 #cash-checkout-form-container {
-  width: 380px;
-  height: 420px;
+  /* width: 380px;
+  height: 420px; */
+  width: 90%;
+  height: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -218,16 +223,29 @@ ul {
   align-items: center;
   justify-content: center;
 }
+
 #cash-submit {
   cursor: pointer;
   font-size: 16px;
-  width: 25%;
-  border-color: gold;
+  width: 165px;
+  padding: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  /* font-family: "roboto"; */
+  border: none;
   border-radius: 8px;
-  margin-bottom: 12px;
   background: gold;
   color: black;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+#cash-submit:hover {
+  background-color: #ffd700; /* Change the background color on hover */
+}
+
+#cash-submit:active {
+  transform: scale(0.98);
+}
+
 #cash-container-total {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
@@ -236,9 +254,11 @@ ul {
   padding-bottom: 20px;
 }
 #cash-on-hand {
-  border: 1px solid black;
+  border: none;
   border-radius: 6px;
-  padding: 2px;
+  padding: 4px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 #cash-submit {
   margin: 10px;
@@ -249,7 +269,7 @@ ul {
 }
 /* ------------------ */
 #credit-card-form {
-  width: 380px;
+  /* width: 380px;
   height: 420px;
   position: absolute;
   top: 50%;
@@ -257,7 +277,20 @@ ul {
   transform: translate(-50%, -50%);
   border: none;
   border-radius: 6px;
+  background-color: lightgrey; */
+  width: 90%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 6px;
   background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #form-header {
   height: 40px;
@@ -276,9 +309,10 @@ ul {
 }
 #cardholder-name,
 #card-number {
-  width: 90%;
+  width: 97%;
   margin-bottom: 20px;
-  border: 1px solid black;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
 }
 #cardholder-name {
@@ -286,9 +320,10 @@ ul {
 }
 #month-container select,
 #year-container select {
-  width: 175px;
+  width: 49%;
   margin-bottom: 20px;
-  border: 1px solid black;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
 }
 #month-container select {
@@ -300,7 +335,8 @@ ul {
 #cvv-input input {
   float: left;
   width: 120px;
-  border: 1px solid black;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   background: white;
 }
@@ -316,11 +352,23 @@ ul {
   cursor: pointer;
   font-size: 16px;
   width: 100%;
-  border-color: gold;
+  border: none;
+  padding: 5px;
   border-radius: 8px;
   margin-bottom: 12px;
   background: gold;
   color: black;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#submit-button-credit:hover {
+  background-color: #ffd700; /* Change the background color on hover */
+}
+
+#submit-button-credit:active {
+  transform: scale(0.98);
 }
 #receipt-container {
   /* display: flex;
@@ -335,6 +383,9 @@ ul {
   transform: translate(-50%, -50%);
   background-color: white;
   border: 1px solid black;
+  padding-right: 40px;
+  overflow: auto;
+  z-index: 9999;
 }
 
 #receipt-container h3 {
@@ -344,18 +395,21 @@ ul {
 #item-receipt-container {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 #item-receipt-container li {
   justify-content: space-between;
   list-style: none;
   border-bottom: 1px solid black;
   padding: 20px 0;
+  background-color: white;
 }
 #item-receipt-container img {
   height: 150px;
 }
 #item-receipt-container p {
   margin: 4px;
+  background-color: white;
 }
 
 .payment-options-container {
@@ -365,11 +419,13 @@ ul {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px; /* Optional: Adjust the margin as needed */
+  padding: 20px;
 }
 
 #payment-text {
   font-family: "roboto";
   margin-bottom: 10px;
+  text-align: center;
 }
 
 #cart-delete-button {
@@ -381,26 +437,59 @@ ul {
   background-color: rgb(237, 203, 208);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #cart-delete-button:hover {
-  background-color: rgb(237, 213, 216);
+  background-color: #f3d3d3; /* Change the background color on hover */
+}
+
+#cart-delete-button:active {
+  transform: scale(
+    0.98
+  ); /* Apply a slight scale down effect when the button is clicked */
 }
 
 #cash-delete-button,
-#credit-delete-button,
-#receipt-delete-button {
+#credit-delete-button {
   display: flex;
   margin: 15px;
-  color: black;
+  color: rgb(108, 102, 102);
   font-weight: bold;
   padding: 5px 8px;
   border-radius: 10%;
   border: none;
   cursor: pointer;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-@media only screen and (min-width: 375px) {
+#receipt-delete-button {
+  margin: 15px 34px;
+  color: rgb(108, 102, 102);
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#cash-delete-button:hover,
+#credit-delete-button:hover,
+#receipt-delete-button:hover {
+  background-color: #f1f1f1; /* Change the background color on hover */
+}
+
+#cash-delete-button:active,
+#credit-delete-button:active,
+#receipt-delete-button:active {
+  transform: scale(
+    0.98
+  ); /* Apply a slight scale down effect when the button is clicked */
 }
 
 @media only screen and (min-width: 768px) {
@@ -447,5 +536,18 @@ ul {
     list-style: none;
     border-bottom: 1px solid black;
     padding: 20px 0;
+  }
+  #cash-checkout-form-container {
+    width: 75%;
+    height: 80%;
+  }
+
+  #credit-card-form {
+    width: 75%;
+    height: 80%;
+  }
+
+  #card-details {
+    font-size: 34px;
   }
 }

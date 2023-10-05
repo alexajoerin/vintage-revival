@@ -150,16 +150,35 @@ cartContainer.addEventListener("click", (event) => {
       image.setAttribute("src", item.src);
       image.setAttribute("alt", item.alt);
       descriptionP.textContent = item.description;
-      priceP.textContent = item.price;
+      priceP.textContent = `$${item.price.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        minimumIntegerDigits: 1,
+      })}`;
       newLi.append(image, descriptionP, priceP);
       itemContainer.append(newLi);
     });
     subtotal = purchasingArray.reduce((ac, cv) => ac + cv.price, 0);
     tax = subtotal * 0.06;
     total = subtotal + tax;
-    subtotalContainer.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
-    taxContainer.textContent = `Tax: $${tax.toFixed(2)}`;
-    totalContainer.textContent = `Total: $${total.toFixed(2)}`;
+    subtotalContainer.textContent = `Subtotal: $${subtotal.toLocaleString(
+      undefined,
+      {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        minimumIntegerDigits: 1,
+      }
+    )}`;
+    taxContainer.textContent = `Tax: $${tax.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+      minimumIntegerDigits: 1,
+    })}`;
+    totalContainer.textContent = `Total: $${total.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+      minimumIntegerDigits: 1,
+    })}`;
   }
 });
 cartDeleteButton.addEventListener("click", (event) => {
@@ -172,7 +191,22 @@ cashButton.addEventListener("click", (event) => {
   if (event.target.id === "cash-button") {
     cashCheckout.classList.remove("hidden");
     purchasingCart.classList.add("hidden");
-    cashContainerTotal.append(`Cart Total: $${total.toFixed(2)}`);
+    cashContainerTotal.textContent = `Cart Total: $${total.toLocaleString(
+      undefined,
+      {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        minimumIntegerDigits: 1,
+      }
+    )}`;
+    cashContainerTotal.textContent = `Cart Total: $${total.toLocaleString(
+      undefined,
+      {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        minimumIntegerDigits: 1,
+      }
+    )}`;
   }
 });
 const cashDeleteButton = document.querySelector("#cash-delete-button");
@@ -208,7 +242,11 @@ const categoryFiller = (array, container, arrayName) => {
     image.setAttribute("src", item.src);
     image.setAttribute("alt", item.alt);
     descriptionP.textContent = item.description;
-    priceP.textContent = `$${item.price}`;
+    priceP.textContent = `$${item.price.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+      minimumIntegerDigits: 1,
+    })}`;
     addToCart.textContent = "Add to Cart";
     list.append(image, descriptionP, addToCart, priceP);
     container.append(list);
@@ -265,7 +303,11 @@ cashCheckoutFormContainer.addEventListener("submit", (event) => {
     image.setAttribute("src", item.src);
     image.setAttribute("alt", item.alt);
     descriptionP.textContent = item.description;
-    priceP.textContent = item.price;
+    priceP.textContent = `$${item.price.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+      minimumIntegerDigits: 1,
+    })}`;
     newLi.append(image, descriptionP, priceP);
     itemReceiptContainer.append(
       newLi,
@@ -299,7 +341,11 @@ creditCardForm.addEventListener("submit", (event) => {
     image.setAttribute("src", item.src);
     image.setAttribute("alt", item.alt);
     descriptionP.textContent = item.description;
-    priceP.textContent = item.price;
+    priceP.textContent = `$${item.price.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+      minimumIntegerDigits: 1,
+    })}`;
     newLi.append(image, descriptionP, priceP);
     itemReceiptContainer.append(
       newLi,
