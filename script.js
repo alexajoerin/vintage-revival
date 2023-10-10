@@ -140,8 +140,6 @@ cartContainer.addEventListener("click", (event) => {
     currentCart.classList.remove("hidden");
     subtotalTaxTotalField.classList.remove("hidden");
     buttonContainer.classList.remove("hidden");
-    // receiptContainer.classList.remove("hidden");
-    // receiptHeader.classList.add("hidden");
     purchasingArray.forEach((item) => {
       const newLi = document.createElement("li");
       const image = document.createElement("img");
@@ -257,8 +255,6 @@ categoryFiller(bedroomProducts, bedroomContainer, "bedroomProducts");
 categoryFiller(chairProducts, chairContainer, "chairProducts");
 categoryFiller(tableProducts, tableContainer, "tableProducts");
 main.addEventListener("click", (event) => {
-  // purchasingArray.innerHTML = "";
-  // currentCart.innerHTML = "";
   if (event.target.classList.contains("cart-button")) {
     const index = event.target.getAttribute("data-index");
     const array = event.target.getAttribute("data-array");
@@ -290,11 +286,8 @@ cashCheckoutFormContainer.addEventListener("submit", (event) => {
   event.preventDefault();
   receiptContainer.classList.remove("hidden");
   orderConfirmation.classList.remove("hidden");
-  // currentCart.classList.add("hidden");
   subtotalTaxTotalField.classList.add("hidden");
-  // receiptHeader.classList.remove("hidden");
   buttonContainer.classList.add("hidden");
-  // cashCheckout.classList.add("hidden");
   purchasingArray.forEach((item) => {
     const newLi = document.createElement("li");
     const image = document.createElement("img");
@@ -329,10 +322,8 @@ creditCardForm.addEventListener("submit", (event) => {
   event.preventDefault();
   receiptContainer.classList.remove("hidden");
   orderConfirmation.classList.remove("hidden");
-  // currentCart.classList.add("hidden");
   subtotalTaxTotalField.classList.add("hidden");
   buttonContainer.classList.add("hidden");
-  // cashCheckout.classList.add("hidden");
   purchasingArray.forEach((item) => {
     const newLi = document.createElement("li");
     const image = document.createElement("img");
@@ -353,6 +344,5 @@ creditCardForm.addEventListener("submit", (event) => {
       taxContainer,
       totalContainer
     );
-    // itemReceiptTotal.append(subtotalTaxTotalField);
   });
 });

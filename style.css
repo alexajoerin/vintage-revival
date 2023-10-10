@@ -5,6 +5,7 @@ h2,
 ul {
   margin: 0;
 }
+
 header {
   position: fixed;
   padding: 10px;
@@ -28,6 +29,7 @@ header {
   color: #161514;
   cursor: pointer;
 }
+
 #cart-counter {
   position: absolute;
   top: 4px;
@@ -55,6 +57,7 @@ header {
   padding-top: 150px;
   background-color: #fff6e9;
 }
+
 #section-container section {
   display: flex;
   flex-direction: column;
@@ -62,24 +65,26 @@ header {
   padding: 20px;
   text-align: center;
 }
+
 section h2 {
   font-family: "Commissioner", sans-serif;
   color: #b85c3c;
   margin-bottom: 30px;
 }
+
 #section-container section h2:first-child {
-  margin-top: -30px; /* Adjust the value as needed */
+  margin-top: -30px;
 }
 
 section ul {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   flex-wrap: wrap;
   padding: 0;
   list-style: none;
   border-bottom: 1px solid goldenrod;
 }
+
 section p {
   font-family: "Roboto", sans-serif;
   color: #161514;
@@ -88,26 +93,30 @@ section p {
 #plushie-container {
   border: none;
 }
+
 #section-container img {
   width: 250px;
   height: 250px;
   border-radius: 15%;
   padding: 25px;
-  /* border-radius: 10%; */
   border: 2px solid goldenrod;
   margin: 10px 25px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
+
 ul {
   display: flex;
   align-items: space-evenly;
 }
+
 #item-container li img {
   height: 150px;
 }
+
 .hidden {
   display: none;
 }
+
 .cart-button {
   background-color: #e5af7d;
   transition: background-color 0.4s ease;
@@ -155,10 +164,12 @@ ul {
   padding: 20px 0;
   font-family: "roboto";
 }
+
 #current-cart p {
   text-align: right;
   font-family: "roboto";
 }
+
 #button-container {
   display: flex;
   flex-direction: column;
@@ -182,8 +193,8 @@ ul {
   font-size: 16px;
   transition: background-color 0.3s ease;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  width: 100px; /* Set a fixed width for the buttons */
-  text-align: center; /* Center the button text */
+  width: 100px;
+  text-align: center;
 }
 
 #cash-button:hover,
@@ -192,7 +203,7 @@ ul {
 }
 
 #cash-button {
-  margin-right: 10px; /* Optional: Add some space between buttons */
+  margin-right: 10px;
 }
 
 #cash-checkout,
@@ -206,9 +217,8 @@ ul {
   background-color: white;
   border: 1px solid black;
 }
+
 #cash-checkout-form-container {
-  /* width: 380px;
-  height: 420px; */
   width: 90%;
   height: 50%;
   position: absolute;
@@ -230,7 +240,6 @@ ul {
   width: 165px;
   padding: 5px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-  /* font-family: "roboto"; */
   border: none;
   border-radius: 8px;
   background: gold;
@@ -239,7 +248,7 @@ ul {
 }
 
 #cash-submit:hover {
-  background-color: #ffd700; /* Change the background color on hover */
+  background-color: #ffd700;
 }
 
 #cash-submit:active {
@@ -253,6 +262,7 @@ ul {
   color: darkslategray;
   padding-bottom: 20px;
 }
+
 #cash-on-hand {
   border: none;
   border-radius: 6px;
@@ -260,24 +270,19 @@ ul {
   margin-bottom: 20px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
+
 #cash-submit {
   margin: 10px;
 }
+
 #item-container {
   display: flex;
   flex-direction: column;
 }
+
 /* ------------------ */
+
 #credit-card-form {
-  /* width: 380px;
-  height: 420px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: none;
-  border-radius: 6px;
-  background-color: lightgrey; */
   width: 90%;
   height: 70%;
   position: absolute;
@@ -292,21 +297,25 @@ ul {
   align-items: center;
   justify-content: center;
 }
+
 #form-header {
   height: 40px;
   padding-top: 20px;
   border-bottom: 1px solid #e1e8ee;
   text-align: center;
 }
+
 #form-body {
   padding: 30px 10px 0 10px;
 }
+
 #card-details {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
   margin: 0;
   color: darkslategray;
 }
+
 #cardholder-name,
 #card-number {
   width: 97%;
@@ -315,9 +324,11 @@ ul {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
 }
+
 #cardholder-name {
   margin-top: 20px;
 }
+
 #month-container select,
 #year-container select {
   width: 49%;
@@ -326,12 +337,15 @@ ul {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
 }
+
 #month-container select {
   float: left;
 }
+
 #year-container select {
   float: right;
 }
+
 #cvv-input input {
   float: left;
   width: 120px;
@@ -340,14 +354,17 @@ ul {
   border-radius: 6px;
   background: white;
 }
+
 #cvv-digits {
   font-size: 12px;
   float: left;
   margin-bottom: 20px;
 }
+
 #cvv-digits p {
   margin: 6px 6px;
 }
+
 #submit-button-credit {
   cursor: pointer;
   font-size: 16px;
@@ -364,17 +381,14 @@ ul {
 }
 
 #submit-button-credit:hover {
-  background-color: #ffd700; /* Change the background color on hover */
+  background-color: #ffd700;
 }
 
 #submit-button-credit:active {
   transform: scale(0.98);
 }
+
 #receipt-container {
-  /* display: flex;
-  flex-direction: column;
-  background-color: white;
-  width: 100%; */
   position: fixed;
   width: 100%;
   height: 100%;
@@ -397,6 +411,7 @@ ul {
   flex-direction: column;
   background-color: white;
 }
+
 #item-receipt-container li {
   justify-content: space-between;
   list-style: none;
@@ -404,9 +419,11 @@ ul {
   padding: 20px 0;
   background-color: white;
 }
+
 #item-receipt-container img {
   height: 150px;
 }
+
 #item-receipt-container p {
   margin: 4px;
   background-color: white;
@@ -418,7 +435,7 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px; /* Optional: Adjust the margin as needed */
+  margin-bottom: 10px;
   padding: 20px;
 }
 
@@ -443,13 +460,11 @@ ul {
 }
 
 #cart-delete-button:hover {
-  background-color: #f3d3d3; /* Change the background color on hover */
+  background-color: #f3d3d3;
 }
 
 #cart-delete-button:active {
-  transform: scale(
-    0.98
-  ); /* Apply a slight scale down effect when the button is clicked */
+  transform: scale(0.98);
 }
 
 #cash-delete-button,
@@ -483,15 +498,13 @@ ul {
 #cash-delete-button:hover,
 #credit-delete-button:hover,
 #receipt-delete-button:hover {
-  background-color: #f1f1f1; /* Change the background color on hover */
+  background-color: #f1f1f1;
 }
 
 #cash-delete-button:active,
 #credit-delete-button:active,
 #receipt-delete-button:active {
-  transform: scale(
-    0.98
-  ); /* Apply a slight scale down effect when the button is clicked */
+  transform: scale(0.98);
 }
 
 @media only screen and (min-width: 768px) {
@@ -527,7 +540,7 @@ ul {
   }
 
   #section-container section h2:first-child {
-    margin-top: 30px; /* Adjust the value as needed */
+    margin-top: 30px;
   }
 
   #current-cart li {
